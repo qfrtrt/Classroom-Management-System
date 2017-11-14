@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="预约信息"
+        />
+    <TextView
+        android:id="@+id/order_room1"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/order_reason1"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/order_time1"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radio_GroupID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/GroupID_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="同意" />
+
+    <RadioButton
+        android:id="@+id/GroupID_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不同意" />
+
+        <RadioButton
+            android:id="@+id/GroupID_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="需当面提交材料" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="提交"
+        />
+
+</LinearLayout>

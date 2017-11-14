@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="亲爱的老师，您好"
+        />
+    <TextView
+        android:id="@+id/classnumber"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="请输入你想预约的教室"/>
+
+    <EditText
+        android:id="@+id/ordernumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入您想预约的教室"/>
+
+    <TextView
+        android:id="@+id/order_Time"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="请选择您想预约的时间"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_GroupID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/GroupID_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1~2节" />
+
+        <RadioButton
+            android:id="@+id/GroupID_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3~4节" />
+
+        <RadioButton
+            android:id="@+id/GroupID_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5~6节" />
+        <RadioButton
+            android:id="@+id/GroupID_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7~8节" />
+        <RadioButton
+            android:id="@+id/GroupID_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9~10节" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="提交"
+        />
+    <TextView
+        android:id="@+id/class_state0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="亲爱的老师，您好"
+        />
+
+</LinearLayout>

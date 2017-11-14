@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="李华 同学你好
+"
+        />
+    <EditText
+        android:id="@+id/orderroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入你想预约的教室"
+        />
+    <EditText
+        android:id="@+id/orderreason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="预约理由"
+        />
+    <RadioGroup
+        android:id="@+id/GroupID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/GroupID_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1~2节" />
+
+        <RadioButton
+            android:id="@+id/GroupID_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3~4节" />
+
+        <RadioButton
+            android:id="@+id/GroupID_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5~6节"/>
+
+        <RadioButton
+            android:id="@+id/GroupID_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7~8节"/>
+
+        <RadioButton
+            android:id="@+id/GroupID_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9~10节" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预约" />
+
+
+</LinearLayout>
