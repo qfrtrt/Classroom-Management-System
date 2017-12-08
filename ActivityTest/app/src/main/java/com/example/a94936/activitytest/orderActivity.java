@@ -31,7 +31,7 @@ public class orderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,4);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
 
         orderroomEdit = (EditText) findViewById(R.id.orderroom);
         order_reason = (EditText) findViewById(R.id.orderreason);

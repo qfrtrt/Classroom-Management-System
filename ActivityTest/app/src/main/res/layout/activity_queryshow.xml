@@ -1,28 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="查询结果"
-        />
+    android:layout_height="match_parent"
+    tools:context="com.example.a94936.activitytest.queryshowActivity">
 
-    <TextView
-        android:id="@+id/querydata"
-        android:layout_width="match_parent"
-        android:textSize="18sp"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/button_1"
+    <TableLayout
+        android:id="@+id/table"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:text="预约"
-        />
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="       "
+                android:layout_height="wrap_content" />
+            <TextView android:text="1~2节       "
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView android:text="3~4节    "
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView android:text="5~6节   "
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView android:text="7~8节    "
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView android:text="9~10节    "
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周一    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text11"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text12"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text13"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text14"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text15"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="周二    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text21"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text22"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text23"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text24"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text25"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周三    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text31"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text32"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text33"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text34"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text35"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周四    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text41"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text42"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text43"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text44"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text45"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周五    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text51"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text52"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text53"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text54"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text55"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周六    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text61"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text62"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text63"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text64"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text65"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:text="周日    "
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text71"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text72"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text73"
+                android:text="可被预约"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text74"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text75"
+                android:layout_marginLeft="1dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
 
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+

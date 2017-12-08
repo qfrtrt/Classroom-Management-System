@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class teacher extends AppCompatActivity {
     private MydatabaseHelper dbHelper;
     private EditText classnumberEdit;
+    private EditText weekdayEdit;
     private TextView state;
     private Button submitButton ;
     private RadioGroup radioGroup;
@@ -27,15 +28,18 @@ public class teacher extends AppCompatActivity {
     private RadioButton RadioButton5;
     public int m;
     public int n;
+    public int b;
     public String s3;
+    public String s4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,4);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
 
         classnumberEdit=(EditText)findViewById(R.id.ordernumber) ;
+        weekdayEdit=(EditText) findViewById(R.id.order_weekday);
         submitButton  =(Button)findViewById(R.id.submit  ) ;
         radioGroup=(RadioGroup)findViewById(R.id.radio_GroupID);
         RadioButton1=(RadioButton)findViewById(R.id.GroupID_1);
@@ -80,11 +84,41 @@ public class teacher extends AppCompatActivity {
         submitButton .setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Classdetail.init();
                 try{
                     m = Integer.valueOf(classnumberEdit.getText().toString());
+                    b=Integer.valueOf(weekdayEdit.getText().toString());
                 }catch(NumberFormatException e){
                     e.printStackTrace();}
+
+                    if(b==1)
+                    {
+                        s4="周一";
+                    }
+                    else if(b==2)
+                    {
+                        s4="周二";
+                    }
+                    else if(b==3)
+                    {
+                        s4="周三";
+                    }
+                    else if(b==4)
+                    {
+                        s4="周四";
+                    }
+                    else if(b==5)
+                    {
+                        s4="周五";
+                    }
+                    else if(b==6)
+                    {
+                        s4="周六";
+                    }
+                    else if(b==7)
+                    {
+                        s4="周日";
+                    }
+
 
                 if(n==0||(m<100||m>110))
                 {
@@ -93,8 +127,8 @@ public class teacher extends AppCompatActivity {
                 else {
                     int a = 0;
                         String s1=classnumberEdit.getText().toString();
-                        String selection ="class_number=? and class_time=?";
-                        String[]selectionArgs = new String[]{s1,s3};
+                        String selection ="class_number=? and class_time=?and weekday?";
+                        String[]selectionArgs = new String[]{s1,s3,s4};
                         SQLiteDatabase db =dbHelper .getWritableDatabase() ;
                         Cursor cursor =db.query("Book",null,selection,selectionArgs,null,null,null);
                         if (cursor.moveToFirst() ){
@@ -115,7 +149,7 @@ public class teacher extends AppCompatActivity {
                         String s2=classnumberEdit.getText().toString();
                         ContentValues values =new ContentValues() ;
                         values.put("class_state","不可预约");
-                        db.update("Book",values,"class_number=?and class_time=?",new String []{s2,s3});
+                        db.update("Book",values,"class_number=?and class_time=?and weekday?",new String []{s2,s3,s4});
                         Intent intent =new Intent(teacher .this,SuccessActivity .class );
                         startActivity(intent );
                     }

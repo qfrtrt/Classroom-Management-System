@@ -12,12 +12,6 @@
         android:text="欢迎来到第十组的教室管理
 "
         />
-    <Button
-        android:id="@+id/sign_in"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:text="注册"
-        />
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
@@ -40,7 +34,13 @@
         android:id="@+id/create_database"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="创建"
+        android:text="创建数据库"
+        />
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="初始化教室信息"
         />
 
 </LinearLayout>

@@ -23,13 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="请输入您想预约的教室"/>
+    <EditText
+        android:id="@+id/order_weekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入您想预约的时间"/>
+
 
     <TextView
         android:id="@+id/order_Time"
         android:layout_width="match_parent"
         android:textSize="18sp"
         android:layout_height="wrap_content"
-        android:text="请选择您想预约的时间"
+        android:text="请选择您想预约的节数"
         />
 
     <RadioGroup
@@ -80,7 +86,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
-        android:text="亲爱的老师，您好"
         />
 
 </LinearLayout>

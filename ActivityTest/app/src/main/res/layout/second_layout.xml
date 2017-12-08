@@ -17,50 +17,6 @@
         android:layout_height="wrap_content"
         android:hint="请输入你想查询的教室"
         />
-    <TextView
-        android:id="@+id/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="查询时间"/>
-    <RadioGroup
-        android:id="@+id/radioGroupID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <RadioButton
-        android:id="@+id/GroupID_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1~2节" />
-
-    <RadioButton
-        android:id="@+id/GroupID_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3~4节" />
-
-    <RadioButton
-        android:id="@+id/GroupID_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5~6节"/>
-
-    <RadioButton
-        android:id="@+id/GroupID_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="7~8节"/>
-
-    <RadioButton
-        android:id="@+id/GroupID_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="9~10节" />
-
-
-    </RadioGroup>
-
 
     <Button
         android:id="@+id/queryButton"

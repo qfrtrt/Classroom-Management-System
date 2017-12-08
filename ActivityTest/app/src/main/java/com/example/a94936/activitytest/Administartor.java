@@ -37,7 +37,7 @@ public class Administartor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administartor);
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,4);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
         orderclass = (TextView ) findViewById(R.id.order_room1);
         orderreason =(TextView)  findViewById(R.id.order_reason1 );
         ordertime=(TextView )findViewById(R.id.order_time1) ;
@@ -68,8 +68,8 @@ public class Administartor extends AppCompatActivity {
         if(time.equals("预约时间为1~2节课"))
         {
             time1="1~2节";
+        }
         else if(time.equals("预约时间为3~4节课"))
-    }
         {
             time1="3~4节";
         }

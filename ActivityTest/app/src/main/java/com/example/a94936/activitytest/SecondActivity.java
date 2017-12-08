@@ -28,7 +28,7 @@ public class SecondActivity extends AppCompatActivity {
     private RadioButton RadioButton4;
     private RadioButton RadioButton5;
     private TextView state;
-    public int m;
+    public String m;
     public int n;
     public String s3;
 
@@ -37,21 +37,21 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
 
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,4);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
 
         classnumberEdit=(EditText)findViewById(R.id.edit_query) ;
         queryButton  =(Button)findViewById(R.id.queryButton ) ;
         orderButton  =(Button)findViewById(R.id.order_Button) ;
         back_answer  =(Button)findViewById(R.id.back_answer_Bt ) ;
-        radioGroup=(RadioGroup)findViewById(R.id.radioGroupID);
+        /*radioGroup=(RadioGroup)findViewById(R.id.radioGroupID);
         RadioButton1=(RadioButton)findViewById(R.id.GroupID_1);
         RadioButton2=(RadioButton)findViewById(R.id.GroupID_2);
         RadioButton3=(RadioButton)findViewById(R.id.GroupID_3);
         RadioButton4=(RadioButton)findViewById(R.id.GroupID_4);
         RadioButton5=(RadioButton)findViewById(R.id.GroupID_5);
-        state=(TextView)findViewById(R.id.class_state);
+        state=(TextView)findViewById(R.id.class_state);*/
 
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+        /*radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 if (checkedId == RadioButton1.getId()) {
@@ -81,17 +81,21 @@ public class SecondActivity extends AppCompatActivity {
                 else {
                 }
             }
-        });
+        });*/
 
         queryButton .setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
-                Classdetail.init();
+            public void onClick(View v)
+            {
                 try{
-                    m = Integer.valueOf(classnumberEdit.getText().toString());
+                    m = classnumberEdit.getText().toString();
                 }catch(NumberFormatException e){
                     e.printStackTrace();}
-                if(n==0)
+                Intent intent1 = new Intent();
+                intent1.putExtra("class_number", m);
+                intent1.setClass(SecondActivity.this,queryshowActivity.class);
+                startActivity(intent1);
+                /*if(n==0)
                 {
                     Toast.makeText(SecondActivity .this,"请选择一个时间段进行查询",Toast.LENGTH_SHORT).show();
                 }
@@ -108,7 +112,7 @@ public class SecondActivity extends AppCompatActivity {
                         }while(cursor.moveToNext());
                     }
                     cursor.close();
-                }
+                }*/
             }
         });
 

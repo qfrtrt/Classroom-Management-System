@@ -14,6 +14,7 @@ public class MydatabaseHelper extends SQLiteOpenHelper {
             +"id integer primary key autoincrement,"
             +"class_number integer ,"
             +"class_time text,"
+            +"weekday text,"
             +"class_state text )";
 
     public static final String CREATE_Answer="create table Answer("
