@@ -17,7 +17,7 @@ public class queryshowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queryshow);
 
-       dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
+       dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,6);
 
         TextView querydatar11 = (TextView) findViewById(R.id.text11);
         TextView querydatar12 = (TextView) findViewById(R.id.text12);

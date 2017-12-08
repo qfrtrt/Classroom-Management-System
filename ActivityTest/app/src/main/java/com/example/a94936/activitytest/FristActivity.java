@@ -1,6 +1,10 @@
 package com.example.a94936.activitytest;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +49,7 @@ public class FristActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
 
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,6);
         Button createDatabase=(Button )findViewById(R.id.create_database );
         createDatabase .setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1184,5 +1188,40 @@ public class FristActivity extends AppCompatActivity {
                 }
             }
         });
+        clearNotification();
+    }
+    @Override
+    protected void onStop(){
+        showNotification();
+        super.onStop();
+    }
+
+    @Override
+    protected void onStart(){
+        clearNotification();
+        super.onStart();
+    }
+
+    private void showNotification(){
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification.Builder nfBuilder = new Notification.Builder(FristActivity.this);
+        nfBuilder.setSmallIcon(R.mipmap.ic_launcher);
+        nfBuilder.setTicker("显示第二个通知");
+        nfBuilder.setContentTitle("weDo");
+        nfBuilder.setContentText("点击查看今日进度");
+
+        nfBuilder.setWhen(System.currentTimeMillis()+300000);
+        nfBuilder.setDefaults(Notification.DEFAULT_ALL);
+        nfBuilder.setAutoCancel(true);
+        Intent intent = new Intent(FristActivity.this,FristActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(FristActivity.this,0,intent,0);
+        nfBuilder.setContentIntent(pendingIntent);
+        Notification notification = nfBuilder.build();
+        notificationManager.notify(124,notification);
+    }
+
+    private void clearNotification(){
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.cancel(0);
     }
 }

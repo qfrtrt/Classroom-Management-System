@@ -80,6 +80,12 @@
         android:layout_height="46dp"
         android:text="提交"
         />
+    <Button
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="查看教室详情"
+        />
     <TextView
         android:id="@+id/class_state0"
         android:layout_width="match_parent"

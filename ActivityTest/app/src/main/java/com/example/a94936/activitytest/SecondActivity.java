@@ -37,7 +37,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
 
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,6);
 
         classnumberEdit=(EditText)findViewById(R.id.edit_query) ;
         queryButton  =(Button)findViewById(R.id.queryButton ) ;

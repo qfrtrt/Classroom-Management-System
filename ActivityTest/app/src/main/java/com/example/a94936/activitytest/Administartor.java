@@ -20,6 +20,7 @@ public class Administartor extends AppCompatActivity {
     private TextView orderclass;
     private TextView  orderreason;
     private TextView  ordertime;
+    private TextView orderweekday;
     private Button submit;
     private RadioGroup radioGroup;
     private RadioButton RadioButton1;
@@ -31,16 +32,18 @@ public class Administartor extends AppCompatActivity {
     private String class_number;
     private String time;
     private String time1;
+    String weekday;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administartor);
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,6);
         orderclass = (TextView ) findViewById(R.id.order_room1);
         orderreason =(TextView)  findViewById(R.id.order_reason1 );
         ordertime=(TextView )findViewById(R.id.order_time1) ;
+        orderweekday=(TextView)findViewById(R.id.order_weekday1) ;
         submit=(Button )findViewById(R.id.submit);
         radioGroup=(RadioGroup)findViewById(R.id.radio_GroupID);
         RadioButton1=(RadioButton)findViewById(R.id.GroupID_1);
@@ -58,8 +61,12 @@ public class Administartor extends AppCompatActivity {
                 }catch(NumberFormatException e){
                     e.printStackTrace();}
                 orderclass.setText(class_number);
+
                 String reason =cursor.getString(cursor.getColumnIndex("order_reason") );
                 orderreason .setText(reason);
+                weekday =cursor.getString(cursor.getColumnIndex("order_weekday") );
+                orderweekday .setText(weekday);
+
                 time=cursor.getString(cursor.getColumnIndex("order_time") );
                 ordertime.setText(time);
             }while(cursor.moveToNext());
@@ -138,7 +145,7 @@ public class Administartor extends AppCompatActivity {
                         SQLiteDatabase  db =dbHelper .getWritableDatabase() ;
                         ContentValues values =new ContentValues() ;
                         values.put("class_state","不可预约");
-                        db.update("Book",values,"class_number=?and class_time=?",new String []{class_number,time1});
+                        db.update("Book",values,"class_number=?and class_time=? and weekday=?",new String []{class_number,time1,weekday});
                     }
                     Intent intent = new Intent(Administartor.this, SuccessActivity .class);
                     startActivity(intent);

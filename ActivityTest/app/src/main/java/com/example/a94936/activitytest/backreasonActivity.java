@@ -17,7 +17,7 @@ public class backreasonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_backreason);
-        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,5);
+        dbHelper =new MydatabaseHelper(this,"Bookstore.db",null,6);
         back=(TextView) findViewById(R.id.text_answer );
         Button query=(Button ) findViewById(R.id.query_data);
         query.setOnClickListener(new View.OnClickListener() {

@@ -23,6 +23,12 @@
         android:layout_height="wrap_content"
         android:hint="预约理由"
         />
+    <EditText
+        android:id="@+id/weekday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="预约时间"
+        />
     <RadioGroup
         android:id="@+id/GroupID"
         android:layout_width="wrap_content"

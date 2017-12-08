@@ -21,6 +21,7 @@ public class MydatabaseHelper extends SQLiteOpenHelper {
             +"id integer primary key autoincrement,"
             +"order_class text,"
             +"order_reason text,"
+            +"order_weekday text,"
             +"order_time text)";
 
     public static final String CREATE_Identity="create table Identity("
