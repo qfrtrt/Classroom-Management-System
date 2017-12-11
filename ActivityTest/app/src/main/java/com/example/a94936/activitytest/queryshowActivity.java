@@ -59,7 +59,7 @@ public class queryshowActivity extends AppCompatActivity {
         String classnumber= intent.getStringExtra("class_number");
 
         String w1="周一";
-        String w2="周一";
+        String w2="周二";
         String w3="周三";
         String w4="周四";
         String w5="周五";
@@ -125,7 +125,7 @@ public class queryshowActivity extends AppCompatActivity {
         Cursor cursor15 =db.query("Book",null,selection15,selectionArgs15,null,null,null);
         if (cursor15.moveToFirst() ){
             do{
-                String class_states=cursor15.getString(cursor13.getColumnIndex("class_state") );
+                String class_states=cursor15.getString(cursor15.getColumnIndex("class_state") );
                 querydatar15.setText(class_states);
             }while(cursor15.moveToNext());
         }
@@ -136,7 +136,7 @@ public class queryshowActivity extends AppCompatActivity {
         Cursor cursor21 =db.query("Book",null,selection21,selectionArgs21,null,null,null);
         if (cursor21.moveToFirst() ){
             do{
-                String class_states=cursor21.getString(cursor13.getColumnIndex("class_state") );
+                String class_states=cursor21.getString(cursor21.getColumnIndex("class_state") );
                 querydatar21.setText(class_states);
             }while(cursor21.moveToNext());
         }
@@ -147,7 +147,7 @@ public class queryshowActivity extends AppCompatActivity {
         Cursor cursor22 =db.query("Book",null,selection22,selectionArgs22,null,null,null);
         if (cursor22.moveToFirst() ){
             do{
-                String class_states=cursor22.getString(cursor13.getColumnIndex("class_state") );
+                String class_states=cursor22.getString(cursor22.getColumnIndex("class_state") );
                 querydatar22.setText(class_states);
             }while(cursor22.moveToNext());
         }
@@ -180,7 +180,7 @@ public class queryshowActivity extends AppCompatActivity {
         Cursor cursor25 =db.query("Book",null,selection25,selectionArgs25,null,null,null);
         if (cursor25.moveToFirst() ){
             do{
-                String class_states=cursor25.getString(cursor24.getColumnIndex("class_state") );
+                String class_states=cursor25.getString(cursor25.getColumnIndex("class_state") );
                 querydatar25.setText(class_states);
             }while(cursor25.moveToNext());
         }
